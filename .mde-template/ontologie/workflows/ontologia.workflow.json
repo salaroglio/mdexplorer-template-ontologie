@@ -1,0 +1,120 @@
+{
+  "mde_workflow": 3,
+  "title": "Ontologia: dalle domande all'accettazione",
+  "description": "Le domande a cui l'ontologia deve rispondere, lo schema con le sue regole, gli esempi, la verifica e la decisione del responsabile del dominio.",
+  "steps": [
+    {
+      "id": "domande",
+      "agent": "ontologie-analista",
+      "skill": "domande-di-competenza",
+      "title": "Domande di competenza",
+      "trigger": {
+        "launch": true
+      },
+      "start": "manual"
+    },
+    {
+      "id": "schema",
+      "agent": "ontologie-ontologo",
+      "skill": "schema",
+      "title": "Schema, regole e query",
+      "trigger": {
+        "after": [
+          "domande"
+        ]
+      },
+      "start": "ask-owner",
+      "inputs": {
+        "domande": {
+          "from": "domande.domande"
+        }
+      }
+    },
+    {
+      "id": "esempi",
+      "agent": "ontologie-ontologo",
+      "skill": "esempi",
+      "title": "Esempi",
+      "trigger": {
+        "after": [
+          "schema"
+        ]
+      },
+      "start": "auto",
+      "inputs": {
+        "domande": {
+          "from": "domande.domande"
+        },
+        "schema": {
+          "from": "schema.schema"
+        }
+      }
+    },
+    {
+      "id": "verifica",
+      "agent": "ontologie-verificatore",
+      "skill": "verifica",
+      "title": "Verifica",
+      "trigger": {
+        "after": [
+          "esempi"
+        ]
+      },
+      "start": "auto",
+      "inputs": {
+        "domande": {
+          "from": "domande.domande"
+        },
+        "schema": {
+          "from": "schema.schema"
+        },
+        "regole": {
+          "from": "schema.regole"
+        },
+        "query": {
+          "from": "schema.query"
+        },
+        "istanze": {
+          "from": "esempi.istanze"
+        }
+      }
+    },
+    {
+      "id": "decisione",
+      "person": "Responsabile del dominio",
+      "title": "Accetta l'ontologia",
+      "trigger": {
+        "after": [
+          "verifica"
+        ]
+      },
+      "task": "Leggi il rapporto di verifica: ogni domanda di competenza ha la sua risposta. Decidi se l'ontologia è accettata.",
+      "inputs": {
+        "rapporto": {
+          "from": "verifica.rapporto"
+        }
+      },
+      "outcomes": [
+        {
+          "id": "accettata",
+          "label": "Accettata"
+        },
+        {
+          "id": "da-rifare",
+          "label": "Da rifare"
+        }
+      ]
+    }
+  ],
+  "loops": [
+    {
+      "id": "rifacimento",
+      "steps": [
+        "schema",
+        "esempi"
+      ],
+      "until": "approved",
+      "restart": "manual"
+    }
+  ]
+}
