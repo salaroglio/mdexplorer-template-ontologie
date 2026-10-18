@@ -1,0 +1,23 @@
+# ============================================================
+#  gara.ttl — lo schema della gara: bandi, committente, criteri, ruoli
+# ============================================================
+@prefix gara: <https://example.org/ontology/gara#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+gara:Bando a owl:Class ; rdfs:label "Bando"@it .
+gara:Committente a owl:Class ; rdfs:label "Committente"@it .
+gara:Criterio a owl:Class ; rdfs:label "Criterio di valutazione"@it .
+gara:Ruolo a owl:Class ; rdfs:label "Ruolo"@it .
+
+gara:codice a owl:DatatypeProperty ; rdfs:domain gara:Bando ; rdfs:range xsd:string .
+gara:titolo a owl:DatatypeProperty ; rdfs:domain gara:Bando ; rdfs:range xsd:string .
+gara:stato a owl:DatatypeProperty ; rdfs:domain gara:Bando ; rdfs:range xsd:string ; rdfs:comment "aperto o chiuso"@it .
+gara:scadenzaOfferte a owl:DatatypeProperty ; rdfs:domain gara:Bando ; rdfs:range xsd:date .
+gara:nelRegistro a owl:DatatypeProperty ; rdfs:domain gara:Bando ; rdfs:range xsd:boolean .
+gara:committente a owl:ObjectProperty ; rdfs:domain gara:Bando ; rdfs:range gara:Committente .
+
+gara:numero a owl:DatatypeProperty ; rdfs:domain gara:Criterio ; rdfs:range xsd:integer .
+gara:blocca a owl:DatatypeProperty ; rdfs:domain gara:Criterio ; rdfs:range xsd:boolean .
+gara:valutatoDa a owl:ObjectProperty ; rdfs:domain gara:Criterio ; rdfs:range gara:Ruolo .
