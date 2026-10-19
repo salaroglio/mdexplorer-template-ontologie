@@ -1,6 +1,11 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/orbite.svg" class="mde-sinistra" -->
+<img class="mde-icona-grande" src="/mde-space/icone/pianeta.svg" alt="">
 
 # Ontologie
 
@@ -9,7 +14,7 @@ e verificarla prima di accettarla.
 
 ---
 
-## A che cosa serve
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> A che cosa serve
 
 - Un'ontologia nata dalle classi diventa presto un elenco di parole che nessuno usa
 - Qui si parte dalle **domande di competenza**: ciò che l'ontologia deve saper dire
@@ -17,7 +22,7 @@ e verificarla prima di accettarla.
 
 ---
 
-## Il giro
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Il giro
 
 1. **Domande di competenza** — che cosa deve saper rispondere
 2. **Schema, regole e query** — TBox, SHACL, SPARQL
@@ -27,7 +32,7 @@ e verificarla prima di accettarla.
 
 ---
 
-## Le parole
+## <img class="mde-icona" src="/mde-space/icone/satellite.svg" alt=""> Le parole
 
 | Parola | Che cos'è | Come… |
 |---|---|---|
@@ -38,7 +43,7 @@ e verificarla prima di accettarla.
 
 ---
 
-## Chi fa che cosa
+## <img class="mde-icona" src="/mde-space/icone/astronauta.svg" alt=""> Chi fa che cosa
 
 | Ruolo | Che cosa fa |
 |---|---|
@@ -49,7 +54,7 @@ Tre agenti preparano (analista, ontologo, verificatore), **le persone approvano 
 
 ---
 
-## Che cosa trovi nel progetto
+## <img class="mde-icona" src="/mde-space/icone/base.svg" alt=""> Che cosa trovi nel progetto
 
 - `ontology/`: il dominio da descrivere e le cartelle di schema, esempi, regole e query
 - tre agenti e i loro ruoli, ancora senza nome
@@ -58,7 +63,8 @@ Tre agenti preparano (analista, ontologo, verificatore), **le persone approvano 
 
 ---
 
-## Come si comincia
+<!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Come si comincia
 
 1. Accendi **Fuseki** per il progetto (Impostazioni del progetto) e riaprilo
 2. Ognuno prende il suo ruolo («È mio»)

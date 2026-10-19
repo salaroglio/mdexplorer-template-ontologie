@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.2.0 — 2026-10-19
+- La presentazione nello stile di MdExplorer (tema `mde-space`): paesaggi spaziali in apertura e in chiusura, un'icona per titolo; le slide inglesi hanno anche «How to start». Serve MdExplorer 2026.10.19.11 o più nuovo.
+
 ## 1.1.0 — 2026-10-19
 - La presentazione per la vetrina di «Crea nuovo progetto» (`slides`), in italiano e in inglese: a che cosa serve il metodo, il giro, le parole, chi fa che cosa. Serve MdExplorer 2026.10.19 o più nuovo.
 

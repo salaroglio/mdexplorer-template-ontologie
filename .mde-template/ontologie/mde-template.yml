@@ -3,9 +3,9 @@ id: ontologie
 kind: method
 title: Ontologie
 description: "Disegnare un'ontologia partendo dalle domande a cui deve rispondere: schema, regole ed esempi, verificati prima di accettarla."
-version: 1.1.0
+version: 1.2.0
 requires:
-  mde: 2026.10.19
+  mde: 2026.10.19.11
   features: [fuseki]
 languages:
   it: { structure: main, example: esempio }
