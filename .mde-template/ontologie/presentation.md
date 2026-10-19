@@ -1,17 +1,22 @@
 ---
 document_type: slides
+reveal:
+  theme: mde-space
 ---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/orbite.svg" class="mde-sinistra" -->
+<img class="mde-icona-grande" src="/mde-space/icone/pianeta.svg" alt="">
 
 # Ontologies
 
 Design an ontology starting from the **questions it must answer**,
 and check it before accepting it.
 
-*This method is in Italian: its documents, agents and workflow speak Italian.*
-
 ---
 
-## What it is for
+## <img class="mde-icona" src="/mde-space/icone/telescopio.svg" alt=""> What it is for
+
+*This method is in Italian: its documents, agents and workflow speak Italian.*
 
 - An ontology born from classes soon becomes a list of words nobody uses
 - Here you start from the **competency questions**: what the ontology must be able to say
@@ -19,7 +24,7 @@ and check it before accepting it.
 
 ---
 
-## The round
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> The round
 
 1. **Competency questions** — what it must be able to answer
 2. **Schema, rules and queries** — TBox, SHACL, SPARQL
@@ -29,7 +34,7 @@ and check it before accepting it.
 
 ---
 
-## The words
+## <img class="mde-icona" src="/mde-space/icone/satellite.svg" alt=""> The words
 
 | Word | What it is | Like… |
 |---|---|---|
@@ -40,7 +45,7 @@ and check it before accepting it.
 
 ---
 
-## Who does what
+## <img class="mde-icona" src="/mde-space/icone/astronauta.svg" alt=""> Who does what
 
 | Role | What they do |
 |---|---|
@@ -51,9 +56,19 @@ Three agents prepare (analyst, ontologist, checker), **the people approve and de
 
 ---
 
-## What you find in the project
+## <img class="mde-icona" src="/mde-space/icone/base.svg" alt=""> What you find in the project
 
 - `ontology/`: the domain to describe and the folders of schema, examples, rules and queries
 - three agents and their roles, nobody's yet
 - the competency-questions skill; the check uses MdExplorer's `rdf_check`
 - **with the example**: the ontology of the Nordica Crediti tender, done and checked (invented data)
+
+---
+
+<!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
+## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> How to start
+
+1. Turn **Fuseki** on for the project (Project settings) and reopen it
+2. Each one takes their role («It's mine»)
+3. Fill in `ontology/dominio.md`
+4. The domain owner starts «Domande di competenza»
