@@ -3,9 +3,9 @@ id: ontologie
 kind: method
 title: Ontologie
 description: "Disegnare un'ontologia partendo dalle domande a cui deve rispondere: schema, regole ed esempi, verificati prima di accettarla."
-version: 1.0.0
+version: 1.1.0
 requires:
-  mde: 2026.10.18
+  mde: 2026.10.19
   features: [fuseki]
 languages:
   it: { structure: main, example: esempio }
@@ -15,6 +15,9 @@ roles:
 workflows:
   - .mde-template/ontologie/workflows/ontologia.md
 instructions: .mde-template/ontologie/istruzioni.md
+slides:
+  it: .mde-template/ontologie/presentazione.md
+  en: .mde-template/ontologie/presentation.md
 seeds:
   - { from: .mde-template/ontologie/semi/README.md, to: ontology/README.md }
   - { from: .mde-template/ontologie/esempio/dominio.md, to: ontology/dominio.md }
