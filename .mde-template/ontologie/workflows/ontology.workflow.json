@@ -1,0 +1,120 @@
+{
+  "mde_workflow": 3,
+  "title": "Ontology: from the questions to the acceptance",
+  "description": "The questions the ontology must answer, the schema with its rules, the examples, the check and the decision of the domain owner.",
+  "steps": [
+    {
+      "id": "questions",
+      "agent": "ontologie-analyst",
+      "skill": "competency-questions",
+      "title": "Competency questions",
+      "trigger": {
+        "launch": true
+      },
+      "start": "manual"
+    },
+    {
+      "id": "schema",
+      "agent": "ontologie-ontologist",
+      "skill": "schema",
+      "title": "Schema, rules and queries",
+      "trigger": {
+        "after": [
+          "questions"
+        ]
+      },
+      "start": "ask-owner",
+      "inputs": {
+        "questions": {
+          "from": "questions.questions"
+        }
+      }
+    },
+    {
+      "id": "examples",
+      "agent": "ontologie-ontologist",
+      "skill": "examples",
+      "title": "Examples",
+      "trigger": {
+        "after": [
+          "schema"
+        ]
+      },
+      "start": "auto",
+      "inputs": {
+        "questions": {
+          "from": "questions.questions"
+        },
+        "schema": {
+          "from": "schema.schema"
+        }
+      }
+    },
+    {
+      "id": "check",
+      "agent": "ontologie-checker",
+      "skill": "check",
+      "title": "Check",
+      "trigger": {
+        "after": [
+          "examples"
+        ]
+      },
+      "start": "auto",
+      "inputs": {
+        "questions": {
+          "from": "questions.questions"
+        },
+        "schema": {
+          "from": "schema.schema"
+        },
+        "rules": {
+          "from": "schema.rules"
+        },
+        "queries": {
+          "from": "schema.queries"
+        },
+        "instances": {
+          "from": "examples.instances"
+        }
+      }
+    },
+    {
+      "id": "decision",
+      "person": "Domain owner",
+      "title": "Accept the ontology",
+      "trigger": {
+        "after": [
+          "check"
+        ]
+      },
+      "task": "Read the verification report: every competency question has its answer. Decide whether the ontology is accepted.",
+      "inputs": {
+        "report": {
+          "from": "check.report"
+        }
+      },
+      "outcomes": [
+        {
+          "id": "accepted",
+          "label": "Accepted"
+        },
+        {
+          "id": "to-redo",
+          "label": "To redo"
+        }
+      ]
+    }
+  ],
+  "loops": [
+    {
+      "id": "rework",
+      "steps": [
+        "schema",
+        "examples"
+      ],
+      "until": "approved",
+      "restart": "manual"
+    }
+  ]
+}

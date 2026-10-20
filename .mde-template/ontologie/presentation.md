@@ -67,7 +67,7 @@ Three agents prepare (analyst, ontologist, checker), **the people approve and de
 
 ## <img class="mde-icona" src="/mde-space/icone/stella.svg" alt=""> The theory
 
-If you ask for it, it lands in `teoria/ontologie/`: what an ontology is, starting from the questions,
+If you ask for it, it lands in `theory/ontologie/`: what an ontology is, starting from the questions,
 TBox and ABox, SHACL rules, SPARQL queries, Fuseki in MdExplorer, working with the MarkAgent.
 
 To read alone or with the MarkAgent, and it can also be downloaded later, from the project settings.
@@ -79,5 +79,5 @@ To read alone or with the MarkAgent, and it can also be downloaded later, from t
 
 1. Turn **Fuseki** on for the project (Project settings) and reopen it
 2. Each one takes their role («It's mine»)
-3. Fill in `ontology/dominio.md`
-4. The domain owner starts «Domande di competenza»
+3. Fill in `ontology/domain.md`
+4. The domain owner starts «Competency questions»

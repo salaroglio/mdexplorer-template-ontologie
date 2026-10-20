@@ -1,8 +1,8 @@
 mde_template: 1
 id: ontologie
 kind: method
-title: Ontologie
-description: "Disegnare un'ontologia partendo dalle domande a cui deve rispondere: schema, regole ed esempi, verificati prima di accettarla."
+title: Ontologies
+description: "Design an ontology starting from the questions it must answer: schema, rules and examples, checked before accepting it."
 version: 1.4.0
 requires:
   mde: 2026.10.19.14
@@ -11,20 +11,19 @@ languages:
   it: { structure: main, example: esempio }
   en: { structure: en, example: example }
 roles:
-  - { role: Responsabile del dominio, description: "approva le domande di competenza e decide se l'ontologia è accettata", agents: [ontologie-analista] }
-  - { role: Ontologo, description: "approva schema, regole, esempi e verifica", agents: [ontologie-ontologo, ontologie-verificatore] }
+  - { role: Domain owner, description: "approves the competency questions and decides whether the ontology is accepted", agents: [ontologie-analyst] }
+  - { role: Ontologist, description: "approves schema, rules, examples and check", agents: [ontologie-ontologist, ontologie-checker] }
 workflows:
-  - .mde-template/ontologie/workflows/ontologia.md
-instructions: .mde-template/ontologie/istruzioni.md
+  - .mde-template/ontologie/workflows/ontology.md
+instructions: .mde-template/ontologie/instructions.md
 slides:
-  it: .mde-template/ontologie/presentazione.md
   en: .mde-template/ontologie/presentation.md
 theory:
-  it: { from: .mde-template/ontologie/teoria, to: teoria/ontologie }
+  en: { from: .mde-template/ontologie/theory, to: theory/ontologie }
 seeds:
-  - { from: .mde-template/ontologie/semi/README.md, to: ontology/README.md }
-  - { from: .mde-template/ontologie/semi/dominio.md, to: ontology/dominio.md }
-  - { from: .mde-template/ontologie/semi/tbox.md, to: ontology/TBox/README.md }
-  - { from: .mde-template/ontologie/semi/abox.md, to: ontology/ABox/README.md }
-  - { from: .mde-template/ontologie/semi/shapes.md, to: ontology/Shapes/README.md }
-  - { from: .mde-template/ontologie/semi/queries.md, to: ontology/queries/README.md }
+  - { from: .mde-template/ontologie/seeds/README.md, to: ontology/README.md }
+  - { from: .mde-template/ontologie/seeds/domain.md, to: ontology/domain.md }
+  - { from: .mde-template/ontologie/seeds/tbox.md, to: ontology/TBox/README.md }
+  - { from: .mde-template/ontologie/seeds/abox.md, to: ontology/ABox/README.md }
+  - { from: .mde-template/ontologie/seeds/shapes.md, to: ontology/Shapes/README.md }
+  - { from: .mde-template/ontologie/seeds/queries.md, to: ontology/queries/README.md }
