@@ -71,7 +71,6 @@ If you ask for it, it lands in `teoria/ontologie/`: what an ontology is, startin
 TBox and ABox, SHACL rules, SPARQL queries, Fuseki in MdExplorer, working with the MarkAgent.
 
 To read alone or with the MarkAgent, and it can also be downloaded later, from the project settings.
-For now it is in Italian only.
 
 ---
 
