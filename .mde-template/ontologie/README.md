@@ -1,36 +1,36 @@
 ---
-title: Ontologie
+title: Ontologies
 ---
 
-# Ontologie
+# Ontologies
 
 ## TL;DR
 
-Un metodo di lavoro per MdExplorer: disegnare un'ontologia partendo dalle domande a cui deve rispondere. Tre agenti
-preparano domande, schema, regole, esempi e una verifica che risponde a ogni domanda; le persone approvano e decidono.
+A working method for MdExplorer: design an ontology starting from the questions it must answer. Three agents prepare
+questions, schema, rules, examples and a check that answers every question; the people approve and decide.
 
-- Si sceglie in «Crea nuovo progetto» o si aggiunge a un progetto che c'è già; si aggiorna e ci si può staccare.
-- Porta solo la sua cartella e la sua skill; i file del gruppo nascono una volta in `ontology/`.
-- Con l'esempio, il progetto nasce con un'ontologia della gara di Nordica Crediti già fatta e verificata (dati inventati).
+- It is chosen in «Create new project» or added to an existing project; it can be updated and detached.
+- It brings only its folder and its skill; the group's files are created once in `ontology/`.
+- With the example, the project starts with an ontology of the Nordica Crediti tender, already done and checked (invented data).
 
-## Che cosa porta
+## What it brings
 
-| Che cosa | Dove |
+| What | Where |
 |---|---|
-| Il workflow | `workflows/ontologia.md` |
-| Le schede dei tre agenti | `agents/` |
-| I ruoli: Responsabile del dominio, Ontologo | il documento delle responsabilità del progetto, come ruoli aperti |
-| Le istruzioni per gli agenti del progetto | un blocco in `CLAUDE.md`, `AGENTS.md`, `copilot-instructions.md` |
-| I file iniziali del gruppo | `ontology/`, copiati una volta da `semi/` |
-| La skill delle domande di competenza | `.claude/skills/ontologie-domande/` |
-| La teoria | `teoria/`, copiata in `teoria/ontologie/` se la chiedi |
+| The workflow | `workflows/ontology.md` |
+| The cards of the three agents | `agents/` |
+| The roles: Domain owner, Ontologist | the project's responsibilities document, as open roles |
+| The instructions for the project's agents | a block in `CLAUDE.md`, `AGENTS.md`, `copilot-instructions.md` |
+| The group's starting files | `ontology/`, copied once from `seeds/` |
+| The competency-questions skill | `.claude/skills/ontologie-questions/` |
+| The theory | `theory/`, copied into `theory/ontologie/` if you ask for it |
 
-Per scrivere i file usa le skill di MdExplorer `mde-tbox`, `mde-abox` e `mde-shacl`, che si installano quando Fuseki è
-acceso per il progetto (Impostazioni del progetto → Fuseki); la verifica usa lo strumento `rdf_check` di MdExplorer.
+To write the files use MdExplorer's skills `mde-tbox`, `mde-abox` and `mde-shacl`, which are installed when Fuseki is
+on for the project (Project settings → Fuseki); the check uses MdExplorer's tool `rdf_check`.
 
-## Come si comincia
+## How to start
 
-1. Accendi Fuseki per il progetto e riaprilo.
-2. Chi risponde di un ruolo lo prende nel documento delle responsabilità (o con «È mio» nella città degli agenti).
-3. Compila `ontology/dominio.md`.
-4. Il responsabile del dominio lancia «Domande di competenza».
+1. Turn Fuseki on for the project and open it again.
+2. Whoever answers for a role takes it in the responsibilities document (or with «It's mine» in the agent city).
+3. Fill in `ontology/domain.md`.
+4. The domain owner starts «Competency questions».
