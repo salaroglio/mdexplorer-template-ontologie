@@ -22,8 +22,22 @@ theory:
   en: { from: .mde-template/ontologie/theory, to: theory/ontologie }
 seeds:
   - { from: .mde-template/ontologie/seeds/README.md, to: ontology/README.md }
-  - { from: .mde-template/ontologie/seeds/domain.md, to: ontology/domain.md }
+  - { from: .mde-template/ontologie/example/domain.md, to: ontology/domain.md }
   - { from: .mde-template/ontologie/seeds/tbox.md, to: ontology/TBox/README.md }
   - { from: .mde-template/ontologie/seeds/abox.md, to: ontology/ABox/README.md }
   - { from: .mde-template/ontologie/seeds/shapes.md, to: ontology/Shapes/README.md }
   - { from: .mde-template/ontologie/seeds/queries.md, to: ontology/queries/README.md }
+  - { from: .mde-template/ontologie/example/source-nordica-tender.md, to: ontology/sources/nordica-tender.md }
+  - { from: .mde-template/ontologie/example/questions.md, to: ontology/questions.md }
+  - { from: .mde-template/ontologie/example/tender.ttl, to: ontology/TBox/tender.ttl }
+  - { from: .mde-template/ontologie/example/tender.shapes.ttl, to: ontology/Shapes/tender.shapes.ttl }
+  - { from: .mde-template/ontologie/example/nordica-tender.ttl, to: ontology/ABox/nordica-tender.ttl }
+  - { from: .mde-template/ontologie/example/c1-open-calls.rq, to: ontology/queries/c1-open-calls.rq }
+  - { from: .mde-template/ontologie/example/c2-deadline.rq, to: ontology/queries/c2-deadline.rq }
+  - { from: .mde-template/ontologie/example/c3-in-the-register.rq, to: ontology/queries/c3-in-the-register.rq }
+  - { from: .mde-template/ontologie/example/c4-blocking-criteria.rq, to: ontology/queries/c4-blocking-criteria.rq }
+  - { from: .mde-template/ontologie/example/c5-who-evaluates-competence.rq, to: ontology/queries/c5-who-evaluates-competence.rq }
+  - { from: .mde-template/ontologie/example/verification.md, to: ontology/verification.md }
+  - { from: .mde-template/ontologie/example/tender.md, to: ontology/TBox/tender.md }
+  - { from: .mde-template/ontologie/example/nordica-tender-abox.md, to: ontology/ABox/nordica-tender.md }
+  - { from: .mde-template/ontologie/example/tender.shapes.md, to: ontology/Shapes/tender.shapes.md }

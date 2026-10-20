@@ -1,0 +1,4 @@
+# c5 — Who evaluates the competence criterion?
+PREFIX gara: <https://example.org/ontology/gara#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?role WHERE { ?c gara:numero 2 ; gara:valutatoDa ?r . ?r rdfs:label ?role }

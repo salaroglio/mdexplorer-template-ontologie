@@ -1,4 +1,4 @@
-# c3 — Il bando NC-2026-009 è già nel registro?
+# c3 — Is the call NC-2026-009 already in the register?
 PREFIX gara: <https://example.org/ontology/gara#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 ASK { ?b gara:codice "NC-2026-009" ; gara:nelRegistro true }

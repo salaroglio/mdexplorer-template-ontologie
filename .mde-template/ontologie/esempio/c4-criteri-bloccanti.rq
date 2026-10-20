@@ -1,4 +1,0 @@
-# c4 — Quali criteri bloccano la valutazione di un bando?
-PREFIX gara: <https://example.org/ontology/gara#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?numero ?criterio WHERE { ?c a gara:Criterio ; gara:blocca true ; gara:numero ?numero ; rdfs:label ?criterio } ORDER BY ?numero

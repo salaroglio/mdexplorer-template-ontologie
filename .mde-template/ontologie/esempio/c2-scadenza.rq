@@ -1,4 +1,0 @@
-# c2 — Qual è la scadenza delle offerte del bando NC-2027-014?
-PREFIX gara: <https://example.org/ontology/gara#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?scadenza WHERE { ?b gara:codice "NC-2027-014" ; gara:scadenzaOfferte ?scadenza }

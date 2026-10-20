@@ -1,4 +1,0 @@
-# c5 — Chi valuta il criterio della competenza?
-PREFIX gara: <https://example.org/ontology/gara#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?ruolo WHERE { ?c gara:numero 2 ; gara:valutatoDa ?r . ?r rdfs:label ?ruolo }

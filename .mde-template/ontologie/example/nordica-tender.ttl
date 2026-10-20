@@ -1,6 +1,6 @@
 # ============================================================
-#  gara-nordica.ttl — i bandi di Nordica Crediti e i criteri di Pentagroup
-#  Conforme a: gara.ttl. Fonte: ontology/fonti/gara-nordica.md (dati inventati)
+#  nordica-tender.ttl — the calls of Nordica Crediti and the criteria of Pentagroup
+#  Conforms to: tender.ttl. Source: ontology/sources/nordica-tender.md (invented data)
 # ============================================================
 @prefix gara: <https://example.org/ontology/gara#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
@@ -9,76 +9,75 @@
 
 gara:nordica a gara:Committente ; rdfs:label "Nordica Crediti S.p.A." .
 
-gara:accountManager a gara:Ruolo ; rdfs:label "account manager"@it .
-gara:responsabileTecnico a gara:Ruolo ; rdfs:label "responsabile tecnico"@it .
-gara:responsabileLegale a gara:Ruolo ; rdfs:label "responsabile legale"@it .
-gara:responsabileDelivery a gara:Ruolo ; rdfs:label "responsabile delivery"@it .
+gara:accountManager a gara:Ruolo ; rdfs:label "account manager"@en .
+gara:responsabileTecnico a gara:Ruolo ; rdfs:label "technical lead"@en .
+gara:responsabileLegale a gara:Ruolo ; rdfs:label "legal lead"@en .
+gara:responsabileDelivery a gara:Ruolo ; rdfs:label "delivery lead"@en .
 
 gara:nc2027014 a gara:Bando ;
   gara:codice "NC-2027-014" ;
-  gara:titolo "Piattaforma master per la riscossione coattiva dei tributi degli Enti Locali (Progetto ATLANTE)" ;
-  gara:stato "aperto" ;
+  gara:titolo "Master platform for the enforced collection of local authorities' taxes (ATLANTE project)" ;
+  gara:stato "open" ;
   gara:scadenzaOfferte "2027-04-30"^^xsd:date ;
   gara:nelRegistro false ;
   gara:committente gara:nordica .
 
 gara:nc2027012 a gara:Bando ;
   gara:codice "NC-2027-012" ;
-  gara:titolo "Fornitura di licenze software per la gestione documentale" ;
-  gara:stato "aperto" ;
+  gara:titolo "Supply of software licences for document management" ;
+  gara:stato "open" ;
   gara:scadenzaOfferte "2027-03-24"^^xsd:date ;
   gara:nelRegistro false ;
   gara:committente gara:nordica .
 
 gara:nc2027011 a gara:Bando ;
   gara:codice "NC-2027-011" ;
-  gara:titolo "Manutenzione ordinaria e straordinaria degli immobili in portafoglio" ;
-  gara:stato "aperto" ;
+  gara:titolo "Ordinary and extraordinary maintenance of the buildings in the portfolio" ;
+  gara:stato "open" ;
   gara:scadenzaOfferte "2027-04-20"^^xsd:date ;
   gara:nelRegistro false ;
   gara:committente gara:nordica .
 
 gara:nc2026021 a gara:Bando ;
   gara:codice "NC-2026-021" ;
-  gara:titolo "Portale dei pagamenti per i debitori" ;
-  gara:stato "chiuso" ;
+  gara:titolo "Payment portal for debtors" ;
+  gara:stato "closed" ;
   gara:nelRegistro true ;
   gara:committente gara:nordica .
 
 gara:nc2026009 a gara:Bando ;
   gara:codice "NC-2026-009" ;
-  gara:titolo "Servizio di contact center per il recupero stragiudiziale" ;
-  gara:stato "chiuso" ;
+  gara:titolo "Contact centre service for out-of-court recovery" ;
+  gara:stato "closed" ;
   gara:nelRegistro true ;
   gara:committente gara:nordica .
 
 gara:criterio1 a gara:Criterio ;
-  rdfs:label "Settore e natura"@it ;
+  rdfs:label "Sector and nature"@en ;
   gara:numero 1 ;
   gara:blocca true ;
   gara:valutatoDa gara:accountManager .
 
 gara:criterio2 a gara:Criterio ;
-  rdfs:label "Competenza"@it ;
+  rdfs:label "Competence"@en ;
   gara:numero 2 ;
   gara:blocca false ;
   gara:valutatoDa gara:responsabileTecnico .
 
 gara:criterio3 a gara:Criterio ;
-  rdfs:label "Fattibilità dei tempi"@it ;
+  rdfs:label "Feasibility of the timeline"@en ;
   gara:numero 3 ;
   gara:blocca false ;
   gara:valutatoDa gara:responsabileDelivery .
 
 gara:criterio4 a gara:Criterio ;
-  rdfs:label "Rischio contrattuale"@it ;
+  rdfs:label "Contractual risk"@en ;
   gara:numero 4 ;
   gara:blocca false ;
   gara:valutatoDa gara:responsabileLegale .
 
 gara:criterio5 a gara:Criterio ;
-  rdfs:label "Tempo per rispondere"@it ;
+  rdfs:label "Time to respond"@en ;
   gara:numero 5 ;
   gara:blocca true ;
   gara:valutatoDa gara:accountManager .
-

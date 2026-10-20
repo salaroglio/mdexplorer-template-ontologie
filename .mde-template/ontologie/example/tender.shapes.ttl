@@ -1,5 +1,5 @@
 # ============================================================
-#  gara.shapes.ttl — le regole che i dati della gara rispettano
+#  tender.shapes.ttl — the rules the tender data respect
 # ============================================================
 @prefix gara: <https://example.org/ontology/gara#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
@@ -10,17 +10,17 @@
 gara:BandoShape a sh:NodeShape ;
   sh:targetClass gara:Bando ;
   sh:property [ sh:path gara:codice ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^NC-[0-9]{4}-[0-9]{3}$" ;
-                sh:message "un bando ha un codice solo, nella forma NC-AAAA-NNN" ] ;
-  sh:property [ sh:path gara:stato ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "aperto" "chiuso" ) ;
-                sh:message "lo stato di un bando è aperto o chiuso" ] ;
+                sh:message "a call has exactly one code, in the form NC-YYYY-NNN" ] ;
+  sh:property [ sh:path gara:stato ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "open" "closed" ) ;
+                sh:message "the status of a call is open or closed" ] ;
   sh:property [ sh:path gara:scadenzaOfferte ; sh:maxCount 1 ; sh:datatype xsd:date ;
-                sh:message "la scadenza è una data" ] ;
+                sh:message "the deadline is a date" ] ;
   sh:property [ sh:path gara:committente ; sh:minCount 1 ; sh:class gara:Committente ;
-                sh:message "un bando ha il suo committente" ] .
+                sh:message "a call has its contracting authority" ] .
 
 gara:CriterioShape a sh:NodeShape ;
   sh:targetClass gara:Criterio ;
   sh:property [ sh:path gara:numero ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 1 ; sh:maxInclusive 5 ;
-                sh:message "i criteri sono numerati da 1 a 5" ] ;
+                sh:message "the criteria are numbered from 1 to 5" ] ;
   sh:property [ sh:path gara:valutatoDa ; sh:minCount 1 ; sh:class gara:Ruolo ;
-                sh:message "ogni criterio ha chi lo valuta" ] .
+                sh:message "every criterion has someone who evaluates it" ] .

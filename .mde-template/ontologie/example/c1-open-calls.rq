@@ -1,0 +1,4 @@
+# c1 — Which calls are open?
+PREFIX gara: <https://example.org/ontology/gara#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?code WHERE { ?b a gara:Bando ; gara:stato "open" ; gara:codice ?code } ORDER BY ?code

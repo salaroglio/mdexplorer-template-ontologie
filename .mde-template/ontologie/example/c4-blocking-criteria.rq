@@ -1,0 +1,4 @@
+# c4 — Which criteria block the evaluation of a call?
+PREFIX gara: <https://example.org/ontology/gara#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?number ?criterion WHERE { ?c a gara:Criterio ; gara:blocca true ; gara:numero ?number ; rdfs:label ?criterion } ORDER BY ?number
