@@ -3,12 +3,13 @@ id: ontologie
 kind: method
 title: Ontologie
 description: "Disegnare un'ontologia partendo dalle domande a cui deve rispondere: schema, regole ed esempi, verificati prima di accettarla."
-version: 1.3.1
+version: 1.4.0
 requires:
   mde: 2026.10.19.14
   features: [fuseki]
 languages:
   it: { structure: main, example: esempio }
+  en: { structure: en, example: example }
 roles:
   - { role: Responsabile del dominio, description: "approva le domande di competenza e decide se l'ontologia è accettata", agents: [ontologie-analista] }
   - { role: Ontologo, description: "approva schema, regole, esempi e verifica", agents: [ontologie-ontologo, ontologie-verificatore] }

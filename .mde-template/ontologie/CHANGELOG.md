@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.0 — 2026-10-20
+- Il metodo parla anche inglese: i rami `en` (struttura) ed `example` (esempio), con agenti, workflow, skill, file iniziali e teoria in inglese. Le due lingue vanno di pari passo: stessa versione su tutti i rami.
+
 ## 1.3.1 — 2026-10-20
 - La presentazione ha la slide della teoria, in italiano e in inglese (la teoria è per ora solo in italiano).
 
