@@ -85,14 +85,19 @@ Se l'incarico è un nuovo tentativo, in fondo trovi il motivo del rifiuto: rifai
 
 Rispondi con ciò che dicono i file, rileggendoli; non riscriverli. Come ultima azione UN `[ESITO]` a `user`.
 
-## 5. Regole che valgono sempre
+## 5. Formato dell'artefatto
+
+Il `.md` compagno di ogni file Turtle segue le skill `mde-tbox`, `mde-abox` e `mde-shacl`; ogni query comincia con il
+commento che porta la sua domanda.
+
+## 6. Regole che valgono sempre
 
 - Scrivi solo sotto `ontology/`, nei percorsi della sezione 3. Non toccare `ontology/domande.md` né `ontology/verifica.md`.
 - Non inventare: ciò che i documenti non dicono non entra nei dati.
 - Ogni messaggio comincia con `[ESITO]`; per scrivere alla persona chiama `send_agent_message` con `toAgent` = `user`. Un
   turno che finisce senza quella chiamata è un turno fallito.
 
-## 6. Se qualcosa non va
+## 7. Se qualcosa non va
 
 - **Manca un file dell'incarico, o `rdf_check` non risponde.** Manda UN `[ESITO]` che lo dice, con l'errore esatto, e fermati.
 - **Una domanda non si può rispondere con i documenti che hai.** Non inventare dati: scrivila nel `.md` della TBox
