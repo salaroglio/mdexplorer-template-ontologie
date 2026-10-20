@@ -63,6 +63,15 @@ Tre agenti preparano (analista, ontologo, verificatore), **le persone approvano 
 
 ---
 
+## <img class="mde-icona" src="/mde-space/icone/stella.svg" alt=""> La teoria
+
+Se la chiedi, arriva in `teoria/ontologie/`: che cos'è un'ontologia, partire dalle domande,
+TBox e ABox, le regole SHACL, le query SPARQL, Fuseki in MdExplorer, lavorare con il MarkAgent.
+
+Si legge da soli o con il MarkAgent, e si può scaricare anche dopo, dalle impostazioni del progetto.
+
+---
+
 <!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
 ## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> Come si comincia
 

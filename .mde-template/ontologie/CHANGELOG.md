@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.3.1 — 2026-10-20
+- La presentazione ha la slide della teoria, in italiano e in inglese (la teoria è per ora solo in italiano).
+
 ## 1.3.0 — 2026-10-20
 - La teoria del metodo (`theory`): che cos'è un'ontologia, partire dalle domande, TBox e ABox, le regole SHACL, le query SPARQL, Fuseki in MdExplorer, lavorare con il MarkAgent. Si chiede alla creazione del progetto o si scarica dopo, e arriva in `teoria/ontologie/`. Serve MdExplorer 2026.10.19.14 o più nuovo.
 

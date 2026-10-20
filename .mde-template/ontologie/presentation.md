@@ -65,6 +65,16 @@ Three agents prepare (analyst, ontologist, checker), **the people approve and de
 
 ---
 
+## <img class="mde-icona" src="/mde-space/icone/stella.svg" alt=""> The theory
+
+If you ask for it, it lands in `teoria/ontologie/`: what an ontology is, starting from the questions,
+TBox and ABox, SHACL rules, SPARQL queries, Fuseki in MdExplorer, working with the MarkAgent.
+
+To read alone or with the MarkAgent, and it can also be downloaded later, from the project settings.
+For now it is in Italian only.
+
+---
+
 <!-- .slide: data-background-image="/mde-space/sfondi/luna.svg" class="mde-cielo" -->
 ## <img class="mde-icona" src="/mde-space/icone/razzo.svg" alt=""> How to start
 
