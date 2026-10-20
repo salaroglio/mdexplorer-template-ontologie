@@ -23,6 +23,7 @@ preparano domande, schema, regole, esempi e una verifica che risponde a ogni dom
 | Le istruzioni per gli agenti del progetto | un blocco in `CLAUDE.md`, `AGENTS.md`, `copilot-instructions.md` |
 | I file iniziali del gruppo | `ontology/`, copiati una volta da `semi/` |
 | La skill delle domande di competenza | `.claude/skills/ontologie-domande/` |
+| La teoria | `teoria/`, copiata in `teoria/ontologie/` se la chiedi |
 
 Per scrivere i file usa le skill di MdExplorer `mde-tbox`, `mde-abox` e `mde-shacl`, che si installano quando Fuseki è
 acceso per il progetto (Impostazioni del progetto → Fuseki); la verifica usa lo strumento `rdf_check` di MdExplorer.
