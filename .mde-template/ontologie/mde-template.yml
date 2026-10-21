@@ -1,20 +1,15 @@
-mde_template: 1
+mde_template: 2
 id: ontologie
 kind: method
 title: Ontologies
 description: "Design an ontology starting from the questions it must answer: schema, rules and examples, checked before accepting it."
-version: 1.4.0
+version: 2.0.0
 requires:
-  mde: 2026.10.19.14
+  mde: 2026.10.21.2
   features: [fuseki]
 languages:
   it: { structure: main, example: esempio }
   en: { structure: en, example: example }
-roles:
-  - { role: Domain owner, description: "approves the competency questions and decides whether the ontology is accepted", agents: [ontologie-analyst] }
-  - { role: Ontologist, description: "approves schema, rules, examples and check", agents: [ontologie-ontologist, ontologie-checker] }
-workflows:
-  - .mde-template/ontologie/workflows/ontology.md
 instructions: .mde-template/ontologie/instructions.md
 slides:
   en: .mde-template/ontologie/presentation.md
@@ -41,3 +36,11 @@ seeds:
   - { from: .mde-template/ontologie/example/tender.md, to: ontology/TBox/tender.md }
   - { from: .mde-template/ontologie/example/nordica-tender-abox.md, to: ontology/ABox/nordica-tender.md }
   - { from: .mde-template/ontologie/example/tender.shapes.md, to: ontology/Shapes/tender.shapes.md }
+skills:
+  - .mde-template/ontologie/skills/ontologie-questions
+agent_city:
+  roles:
+    - { role: Domain owner, description: "approves the competency questions and decides whether the ontology is accepted", agents: [ontologie-analyst] }
+    - { role: Ontologist, description: "approves schema, rules, examples and check", agents: [ontologie-ontologist, ontologie-checker] }
+  workflows:
+    - .mde-template/ontologie/workflows/ontology.md

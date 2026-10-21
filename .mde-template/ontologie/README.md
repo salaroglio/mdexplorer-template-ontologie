@@ -28,6 +28,8 @@ questions, schema, rules, examples and a check that answers every question; the 
 To write the files use MdExplorer's skills `mde-tbox`, `mde-abox` and `mde-shacl`, which are installed when Fuseki is
 on for the project (Project settings → Fuseki); the check uses MdExplorer's tool `rdf_check`.
 
+Agents, roles and workflows arrive only with the **agent city**: tick it in the «Create new project» showcase, or turn it on later from the project settings. Without it, the method brings its skills, starting files and theory.
+
 ## How to start
 
 1. Turn Fuseki on for the project and open it again.
