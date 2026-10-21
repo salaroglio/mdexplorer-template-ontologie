@@ -1,20 +1,15 @@
-mde_template: 1
+mde_template: 2
 id: ontologie
 kind: method
 title: Ontologie
 description: "Disegnare un'ontologia partendo dalle domande a cui deve rispondere: schema, regole ed esempi, verificati prima di accettarla."
-version: 1.4.0
+version: 2.0.0
 requires:
-  mde: 2026.10.19.14
+  mde: 2026.10.21.2
   features: [fuseki]
 languages:
   it: { structure: main, example: esempio }
   en: { structure: en, example: example }
-roles:
-  - { role: Responsabile del dominio, description: "approva le domande di competenza e decide se l'ontologia è accettata", agents: [ontologie-analista] }
-  - { role: Ontologo, description: "approva schema, regole, esempi e verifica", agents: [ontologie-ontologo, ontologie-verificatore] }
-workflows:
-  - .mde-template/ontologie/workflows/ontologia.md
 instructions: .mde-template/ontologie/istruzioni.md
 slides:
   it: .mde-template/ontologie/presentazione.md
@@ -28,3 +23,11 @@ seeds:
   - { from: .mde-template/ontologie/semi/abox.md, to: ontology/ABox/README.md }
   - { from: .mde-template/ontologie/semi/shapes.md, to: ontology/Shapes/README.md }
   - { from: .mde-template/ontologie/semi/queries.md, to: ontology/queries/README.md }
+skills:
+  - .mde-template/ontologie/skills/ontologie-domande
+agent_city:
+  roles:
+    - { role: Responsabile del dominio, description: "approva le domande di competenza e decide se l'ontologia è accettata", agents: [ontologie-analista] }
+    - { role: Ontologo, description: "approva schema, regole, esempi e verifica", agents: [ontologie-ontologo, ontologie-verificatore] }
+  workflows:
+    - .mde-template/ontologie/workflows/ontologia.md

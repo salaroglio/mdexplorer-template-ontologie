@@ -28,6 +28,8 @@ preparano domande, schema, regole, esempi e una verifica che risponde a ogni dom
 Per scrivere i file usa le skill di MdExplorer `mde-tbox`, `mde-abox` e `mde-shacl`, che si installano quando Fuseki è
 acceso per il progetto (Impostazioni del progetto → Fuseki); la verifica usa lo strumento `rdf_check` di MdExplorer.
 
+Agenti, ruoli e workflow arrivano solo con la **città degli agenti**: spuntala nella vetrina di «Crea nuovo progetto», o accendila dopo dalle impostazioni del progetto. Senza, il metodo porta le skill, i file iniziali e la teoria.
+
 ## Come si comincia
 
 1. Accendi Fuseki per il progetto e riaprilo.

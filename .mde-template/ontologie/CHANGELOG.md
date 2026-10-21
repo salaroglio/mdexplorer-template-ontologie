@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.0.0 — 2026-10-21
+- ⚠️ incompatibile: il template è nel formato 2 e chiede MdExplorer 2026.10.21.2 o più nuovo. Agenti, ruoli e workflow arrivano solo con la città degli agenti accesa; le skill stanno nella cartella del template e MDE le copia in .claude/skills/. Cosa fare: aggiorna MdExplorer prima di aggiornare il template; senza la città, accendila dalle impostazioni del progetto per avere gli agenti.
+
 ## 1.4.0 — 2026-10-20
 - Il metodo parla anche inglese: i rami `en` (struttura) ed `example` (esempio), con agenti, workflow, skill, file iniziali e teoria in inglese. Le due lingue vanno di pari passo: stessa versione su tutti i rami.
 
